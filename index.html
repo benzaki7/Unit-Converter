@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit Converter</title>
+</head>
+
+<body>
+    <h1 class="section-title">UNIT CONVERTER</h1>
+
+    <div class="container">
+        <div class="btn-container">
+            <button class="btn" data-id="weight">Weight</button>
+            <button class="btn" data-id="temperature">Temperature</button>
+            <button class="btn" data-id="length">Length</button>
+        </div>
+
+        <!--Convert weight section-->
+
+        <form class="unit-section active" id="weight">
+            <div class="from">
+                <label for="from-weight">From:</label><br><br>
+                <select name="units" id="from-weight">
+                    <option value="Kilogram">Kilogram</option>
+                    <option value="Gram">Gram</option>
+                    <option value="Pound">Pound</option>
+                    <option value="Ounce">Ounce</option>
+                </select>
+            </div>
+
+            <div class="to">
+                <label for="to-weigth">To:</label><br><br>
+                <select name="units" id="to-weigth">
+                    <option value="Kilogram">Kilogram</option>
+                    <option value="Gram">Gram</option>
+                    <option value="Pound">Pound</option>
+                    <option value="Ounce">Ounce</option>
+                </select>
+            </div>
+        </form>
+
+        <!--Convert temperature section-->
+
+        <form class="unit-section" id="temperature">
+            <div class="from">
+                <label for="from-temperature">From:</label><br><br>
+                <select name="units" id="from-temperature">
+                    <option value="Celsieus">Celsieus</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+
+            <div class="to">
+                <label for="to-temperature">To:</label><br><br>
+                <select name="units" id="to-temperature">
+                    <option value="Celsieus">Celsieus</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
+            </div>
+        </form>
+
+        <!--Convert length section-->
+
+        <form class="unit-section" id="length">
+            <div class="from">
+                <label for="from-length">From:</label><br><br>
+                <select name="units" id="from-length">
+                    <option value="Kilometre">Kilometre</option>
+                    <option value="Meter">Meter</option>
+                    <option value="Mile">Mile</option>
+                    <option value="Foot">Foot</option>
+                </select>
+            </div>
+
+            <div class="to">
+                <label for="to-length">To:</label><br><br>
+                <select name="units" id="to-length">
+                    <option value="Kilometre">Kilometre</option>
+                    <option value="Meter">Meter</option>
+                    <option value="Mile">Mile</option>
+                    <option value="Foot">Foot</option>
+                </select>
+            </div>
+        </form>
+
+
+        <div class="Conversion-container">
+            <input type="number" id="input" placeholder="Enter Value To Convert">
+            <input type="number" id="output" placeholder="Converted Value" readonly>
+        </div>
+    </div>
+    <footer>
+        <p>Benzaki Web Development Copyright &copy; 2020</p>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

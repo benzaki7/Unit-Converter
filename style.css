@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #eaf6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-title {
+    margin: 40px 0 80px;
+    padding-top: 80px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.section-title:before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    bottom: -10px;
+    left: 15%; 
+    border-bottom: 2px solid #000000;
+}
+.container {
+    flex: 1;
+}
+.btn-container {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.btn {
+    margin: 15px;
+    width: 110px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #34495e;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color ease .35s;
+}
+.btn:hover {
+    background-color: #233142;
+}
+
+.unit-section {
+    margin-bottom: 60px;
+    display: none;
+}
+
+.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.from, .to{
+    padding: 25px;
+}
+
+.from  label, .to label{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+#from-weight,  #to-weigth, #from-temperature, #to-temperature, #from-length, #to-length{
+    width: 320px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.Conversion-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Conversion-container input{
+    width: 320px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 5px;
+}
+#input, #output{
+    margin: 25px;
+}
+
+footer {
+    height: 6vh;
+    width: 100%;
+    text-align: center;
+    background-color:  #eaf6f6;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px;
+}
+
+@media screen and (max-width: 756px) {
+    .section-title {
+        margin: 100px 0 80px;
+        padding-top: 100px;
+    }
+}
+@media screen and (max-width: 444px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .btn {
+        margin: 10px;
+        width: 95px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 398px) {
+    .from  label, .to label{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    #from-weight,  #to-weigth, #from-temperature, #to-temperature, #from-length, #to-length{
+        width: 290px;
+        height: 45px;
+    }
+    .Conversion-container input{
+        width: 290px;
+        height: 45px;
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+    footer {
+        font-size: 0.9rem;
+    }
+}
