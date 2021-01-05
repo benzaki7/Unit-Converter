@@ -12,8 +12,9 @@
     <h1 class="section-title">UNIT CONVERTER</h1>
 
     <div class="container">
+
         <div class="btn-container">
-            <button class="btn" data-id="weight">Weight</button>
+            <button class="btn " data-id="weight">Weight</button>
             <button class="btn" data-id="temperature">Temperature</button>
             <button class="btn" data-id="length">Length</button>
         </div>
@@ -24,6 +25,7 @@
             <div class="from">
                 <label for="from-weight">From:</label><br><br>
                 <select name="units" id="from-weight">
+                    <option value="Tonne">Tonne</option>
                     <option value="Kilogram">Kilogram</option>
                     <option value="Gram">Gram</option>
                     <option value="Pound">Pound</option>
@@ -34,6 +36,7 @@
             <div class="to">
                 <label for="to-weigth">To:</label><br><br>
                 <select name="units" id="to-weigth">
+                    <option value="Tonne">Tonne</option>
                     <option value="Kilogram">Kilogram</option>
                     <option value="Gram">Gram</option>
                     <option value="Pound">Pound</option>
@@ -74,6 +77,7 @@
                     <option value="Meter">Meter</option>
                     <option value="Mile">Mile</option>
                     <option value="Foot">Foot</option>
+                    <option value="Inch">Inch</option>
                 </select>
             </div>
 
@@ -84,6 +88,7 @@
                     <option value="Meter">Meter</option>
                     <option value="Mile">Mile</option>
                     <option value="Foot">Foot</option>
+                    <option value="Inch">Inch</option>
                 </select>
             </div>
         </form>
@@ -93,7 +98,9 @@
             <input type="number" id="input" placeholder="Enter Value To Convert">
             <input type="number" id="output" placeholder="Converted Value" readonly>
         </div>
+
     </div>
+    
     <footer>
         <p>Benzaki Web Development Copyright &copy; 2020</p>
     </footer>

@@ -81,14 +81,28 @@ function convertWeightValue() {
     let toWeight = convertToWeight.value;
     let inputValue = input.value;
 
-        if(fromWeight === 'Kilogram' && toWeight === 'Kilogram') {
+        if(fromWeight === 'Tonne' && toWeight === 'Tonne') {
             output.value = inputValue;
+        } else if (fromWeight === 'Tonne' && toWeight === 'Kilogram') {
+            output.value = +(inputValue * 1000).toFixed(6);
+        } else if (fromWeight === 'Tonne' && toWeight === 'Gram') {
+            output.value = +(inputValue * 1000000).toFixed(6);
+        } else if (fromWeight === 'Tonne' && toWeight === 'Pound') {
+            output.value = +(inputValue * 2205).toFixed(6);
+        } else if (fromWeight === 'Tonne' && toWeight === 'Ounce') {
+            output.value = +(inputValue * 35274).toFixed(6);
+        } else if(fromWeight === 'Kilogram' && toWeight === 'Kilogram') {
+            output.value = inputValue;
+        } else if (fromWeight === 'Kilogram' && toWeight === 'Tonne') {
+            output.value = +(inputValue / 1000).toFixed(6);
         } else if (fromWeight === 'Kilogram' && toWeight === 'Gram') {
             output.value = +(inputValue * 1000).toFixed(6);
         } else if (fromWeight === 'Kilogram' && toWeight === 'Pound') {
             output.value = +(inputValue * 2.205).toFixed(6);
         } else if (fromWeight === 'Kilogram' && toWeight === 'Ounce') {
             output.value = +(inputValue * 35.274).toFixed(6);
+        } else if (fromWeight === 'Gram' && toWeight === 'Tonne') {
+            output.value = +(inputValue / 1000000).toFixed(6);
         } else if (fromWeight === 'Gram' && toWeight === 'Kilogram') {
             output.value = +(inputValue / 1000).toFixed(6);
         } else if (fromWeight === 'Gram' && toWeight === 'Gram') {
@@ -97,6 +111,8 @@ function convertWeightValue() {
             output.value = +(inputValue / 454).toFixed(6);
         } else if (fromWeight === 'Gram' && toWeight === 'Ounce') {
             output.value = +(inputValue / 28.35).toFixed(6);
+        } else if (fromWeight === 'Pound' && toWeight === 'Tonne') {
+            output.value = +(inputValue / 2205).toFixed(6);
         } else if (fromWeight === 'Pound' && toWeight === 'Pound') {
             output.value = inputValue;
         } else if (fromWeight === 'Pound' && toWeight === 'Ounce') {
@@ -105,11 +121,13 @@ function convertWeightValue() {
             output.value = +(inputValue / 2.205).toFixed(6);
         } else if (fromWeight === 'Pound' && toWeight === 'Gram') {
             output.value = +(inputValue * 454).toFixed(6);
+        } else if (fromWeight === 'Ounce' && toWeight === 'Tonne') {
+            output.value = +(inputValue / 35274).toFixed(6);
         } else if (fromWeight === 'Ounce' && toWeight === 'Ounce') {
             output.value = inputValue;
-        }else if (fromWeight === 'Ounce' && toWeight === 'Kilogram') {
+        } else if (fromWeight === 'Ounce' && toWeight === 'Kilogram') {
             output.value = +(inputValue / 35.274).toFixed(6);
-        }else if (fromWeight === 'Ounce' && toWeight === 'Gram') {
+        } else if (fromWeight === 'Ounce' && toWeight === 'Gram') {
             output.value = +(inputValue * 28.35).toFixed(6);
         } else if (fromWeight === 'Foot' && toWeight === 'Pound') {
             output.value = +(inputValue / 16).toFixed(6);
@@ -148,7 +166,17 @@ function convertLengthValue () {
     let toLength = convertToLength.value;
     let inputValue = input.value;
     
-        if(fromLength === 'Kilometre' && toLength === 'Kilometre') {
+        if (fromLength === 'Inch' && toLength === 'Inch') {
+            output.value = inputValue;
+        } else if (fromLength === 'Inch' && toLength === 'Meter') {
+            output.value = +(inputValue / 39.37).toFixed(6);
+        } else if (fromLength === 'Inch' && toLength === 'Mile') {
+            output.value = +(inputValue / 63360).toFixed(6);
+        } else if (fromLength === 'Inch' && toLength === 'Foot') {
+            output.value = +(inputValue / 12).toFixed(6);
+        } else if (fromLength === 'Inch' && toLength === 'Kilometre') {
+            output.value = +(inputValue * 39370).toFixed(6);
+        } else if(fromLength === 'Kilometre' && toLength === 'Kilometre') {
             output.value = inputValue;
         } else if (fromLength === 'Kilometre' && toLength === 'Meter') {
             output.value = +(inputValue * 1000).toFixed(6);
@@ -156,6 +184,8 @@ function convertLengthValue () {
             output.value = +(inputValue / 1.609).toFixed(6);
         } else if (fromLength === 'Kilometre' && toLength === 'Foot') {
             output.value = +(inputValue * 3281).toFixed(6);
+        } else if (fromLength === 'Kilometre' && toLength === 'Inch') {
+            output.value = +(inputValue * 39370).toFixed(6);
         } else if (fromLength === 'Meter' && toLength === 'Kilometre') {
             output.value = +(inputValue / 1000).toFixed(6);
         } else if (fromLength === 'Meter' && toLength === 'Meter') {
@@ -164,6 +194,8 @@ function convertLengthValue () {
             output.value = +(inputValue / 1609).toFixed(6);
         } else if (fromLength === 'Meter' && toLength === 'Foot') {
             output.value = +(inputValue * 3.281).toFixed(6);
+        } else if (fromLength === 'Meter' && toLength === 'Inch') {
+            output.value = +(inputValue * 39.37).toFixed(6);
         } else if (fromLength === 'Mile' && toLength === 'Mile') {
             output.value = inputValue;
         } else if (fromLength === 'Mile' && toLength === 'Foot') {
@@ -172,13 +204,17 @@ function convertLengthValue () {
             output.value = +(inputValue * 1.609).toFixed(6);
         } else if (fromLength === 'Mile' && toLength === 'Meter') {
             output.value = +(inputValue * 1609).toFixed(6);
+        } else if (fromLength === 'Mile' && toLength === 'Inch') {
+            output.value = +(inputValue * 63360).toFixed(6);
         } else if (fromLength === 'Foot' && toLength === 'Foot') {
             output.value = inputValue;
-        }else if (fromLength === 'Foot' && toLength === 'Kilometre') {
+        } else if (fromLength === 'Foot' && toLength === 'Kilometre') {
             output.value = +(inputValue / 3281).toFixed(6);
-        }else if (fromLength === 'Foot' && toLength === 'Meter') {
+        } else if (fromLength === 'Foot' && toLength === 'Meter') {
             output.value = +(inputValue /3.281).toFixed(6);
         } else if (fromLength === 'Foot' && toLength === 'Mile') {
             output.value = +(inputValue / 5280).toFixed(6);
+        } else if (fromLength === 'Foot' && toLength === 'Inch') {
+            output.value = +(inputValue / 12).toFixed(6);
         } 
 }
