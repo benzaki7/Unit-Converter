@@ -10,7 +10,7 @@
 body {
     min-height: 100vh;
     width: 100%;
-    background-color: #f1f3ee;
+    background-color: #F8F9FA;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +51,7 @@ body {
     height: 40px;
     font-size: 1rem;
     font-weight: 400;
-    background-color: #79566a;
+    background-color: #343A40;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -60,7 +60,7 @@ body {
     transition: background-color ease .35s;
 }
 .btn:hover {
-    background-color: #5a3d5c;
+    background-color: #495057;
 }
 
 .unit-section {
